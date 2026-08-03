@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumière Dental — Modern &amp; Gentle Dentistry in New York</title>
+  <meta name="description" content="Lumière Dental is a premium dental clinic in New York offering gentle general, cosmetic and emergency dentistry — implants, whitening, Invisalign, veneers and pediatric care. Book your visit today." />
+  <meta name="keywords" content="dental clinic, dentist New York, teeth whitening, dental implants, Invisalign, veneers, emergency dentist, pediatric dentistry" />
+  <link rel="canonical" href="./index.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lumière Dental — Modern & Gentle Dentistry" />
+  <meta property="og:description" content="Premium dental care for radiant smiles. General, cosmetic and emergency dentistry in the heart of New York." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lumière Dental — Modern & Gentle Dentistry" />
+  <meta name="twitter:description" content="Premium dental care for radiant smiles. Book your appointment today." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'instrument-serif': ['"Instrument Serif"', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            pine: {
+              50: '#eef4f2',
+              100: '#d5e4e0',
+              600: '#14524b',
+              700: '#0e4a44',
+              800: '#0b3b36',
+              900: '#081b18'
+            },
+            cream: '#f7f5f0'
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Lumière Dental",
+    "description": "Premium dental clinic offering general, cosmetic, pediatric and emergency dentistry.",
+    "telephone": "+1-212-555-0148",
+    "email": "care@lumieredental.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "128 Madison Avenue, Suite 402",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10016",
+      "addressCountry": "US"
+    },
+    "openingHours": ["Mo-Fr 08:00-19:00", "Sa 09:00-15:00"],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+
+<body class="bg-cream text-pine-900 font-sans antialiased">
+
+  <!-- Skip link for keyboard users -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] bg-white text-pine-900 px-4 py-2 rounded-full text-sm shadow-lg">Skip to main content</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="site-header" class="on-dark fixed top-0 left-0 right-0 z-40">
+    <nav class="flex items-center justify-between px-6 md:px-12 lg:px-16 py-5 md:py-6" aria-label="Main navigation">
+      <div class="flex items-center gap-10">
+        <a href="#home" class="text-white font-semibold text-lg tracking-tight font-sans inline-flex items-center gap-2">
+          <i data-lucide="sparkle" class="w-4 h-4 text-white/80" aria-hidden="true"></i>
+          Lumière Dental
+        </a>
+        <ul class="hidden md:flex items-center gap-7">
+          <li><a href="#about" data-section="about" class="nav-link text-white/80 hover:text-white text-sm font-light transition-colors duration-200">About</a></li>
+          <li><a href="#services" data-section="services" class="nav-link text-white/80 hover:text-white text-sm font-light transition-colors duration-200">Services</a></li>
+          <li><a href="#dentists" data-section="dentists" class="nav-link text-white/80 hover:text-white text-sm font-light transition-colors duration-200">Dentists</a></li>
+          <li><a href="#gallery" data-section="gallery" class="nav-link text-white/80 hover:text-white text-sm font-light transition-colors duration-200">Results</a></li>
+          <li><a href="#faq" data-section="faq" class="nav-link text-white/80 hover:text-white text-sm font-light transition-colors duration-200">FAQ</a></li>
+          <li><a href="#contact" data-section="contact" class="nav-link text-white/80 hover:text-white text-sm font-light transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+12125550148" class="hidden md:inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-light transition-colors duration-200">
+          <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
+          (212) 555-0148
+        </a>
+        <a href="#book" class="hidden md:inline-block bg-white text-black text-sm font-medium rounded-full px-5 py-2 hover:bg-stone-200 transition-colors duration-200">Book Appointment</a>
+        <button id="hamburger-btn" class="hamburger md:hidden flex flex-col items-end justify-center h-10 w-10 -mr-1" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line line-top"></span>
+          <span class="hamburger-line line-middle"></span>
+          <span class="hamburger-line line-bottom"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE MENU OVERLAY ================= -->
+  <div id="mobile-menu" class="on-dark fixed inset-0 z-50 md:hidden" aria-hidden="true" role="dialog" aria-label="Mobile menu">
+    <div class="menu-backdrop absolute inset-0 bg-black/90 backdrop-blur-xl"></div>
+    <div class="menu-content relative z-10 flex flex-col h-full">
+      <div class="flex items-center justify-between px-6 py-5">
+        <span class="text-white font-semibold text-lg tracking-tight">Lumière Dental</span>
+        <button id="close-menu-btn" class="relative h-10 w-10 flex items-center justify-center" aria-label="Close menu">
+          <span class="absolute block h-0.5 w-6 bg-white rounded-full rotate-45"></span>
+          <span class="absolute block h-0.5 w-6 bg-white rounded-full -rotate-45"></span>
+        </button>
+      </div>
+      <nav class="flex-1 flex flex-col justify-center px-8" aria-label="Mobile navigation">
+        <a href="#about" class="menu-item block text-center text-4xl sm:text-5xl font-instrument-serif text-white border-b border-white/10 py-4">About</a>
+        <a href="#services" class="menu-item block text-center text-4xl sm:text-5xl font-instrument-serif text-white border-b border-white/10 py-4">Services</a>
+        <a href="#dentists" class="menu-item block text-center text-4xl sm:text-5xl font-instrument-serif text-white border-b border-white/10 py-4">Dentists</a>
+        <a href="#gallery" class="menu-item block text-center text-4xl sm:text-5xl font-instrument-serif text-white border-b border-white/10 py-4">Results</a>
+        <a href="#faq" class="menu-item block text-center text-4xl sm:text-5xl font-instrument-serif text-white border-b border-white/10 py-4">FAQ</a>
+        <a href="#contact" class="menu-item block text-center text-4xl sm:text-5xl font-instrument-serif text-white py-4">Contact</a>
+      </nav>
+      <div class="px-8 pb-10">
+        <a href="#book" class="menu-cta block w-full bg-white text-black text-center font-medium rounded-full py-4">Book Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="relative w-full h-screen overflow-hidden">
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline webkit-playsinline aria-hidden="true">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260622_204103_f607742e-09da-4cf5-bb06-4e67b0a531de.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" aria-hidden="true"></div>
+
+      <div class="relative z-10 flex flex-col h-full">
+        <div class="h-20 md:h-24" aria-hidden="true"></div>
+
+        <div class="flex-1 flex flex-col items-center justify-center px-6 text-center pb-16">
+          <p class="hero-anim hero-anim-1 section-eyebrow text-white/70 text-[0.68rem] sm:text-xs font-light uppercase mb-5 inline-flex items-center gap-2">
+            <span class="h-px w-6 bg-white/40" aria-hidden="true"></span>
+            Award-winning dental studio · New York
+            <span class="h-px w-6 bg-white/40" aria-hidden="true"></span>
+          </p>
+          <h1 class="hero-anim hero-anim-2 font-instrument-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] max-w-5xl">
+            MODERN <span class="italic font-instrument-serif">and</span> GENTLE<br />
+            DENTISTRY <span class="italic font-instrument-serif">for</span> RADIANT<br />
+            SMILES
+          </h1>
+          <p class="hero-anim hero-anim-3 mt-4 md:mt-5 text-white/70 text-sm md:text-base font-light max-w-md leading-relaxed">
+            Anxiety-free care, artistry-level cosmetics and same-day emergency
+            <br class="hidden sm:block" />
+            treatment — all under one calming roof.
+          </p>
+          <div class="hero-anim hero-anim-4 mt-6 md:mt-7 flex flex-col sm:flex-row items-center gap-4">
+            <a href="#book" class="group inline-flex items-center gap-2 bg-white text-black rounded-full px-7 py-3 text-sm font-medium hover:bg-stone-200 transition-colors duration-300">
+              Book Appointment
+              <i data-lucide="arrow-right" class="btn-arrow w-4 h-4" aria-hidden="true"></i>
+            </a>
+            <a href="tel:+12125550148" class="inline-flex items-center gap-2 border border-white/40 text-white rounded-full px-7 py-3 text-sm font-light hover:bg-white/10 hover:border-white/60 transition-all duration-300">
+              <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
+              Call (212) 555-0148
+            </a>
+          </div>
+        </div>
+
+        <div class="pb-8 flex justify-center">
+          <a href="#about" class="text-white/60 hover:text-white transition-colors" aria-label="Scroll to about section">
+            <i data-lucide="chevron-down" class="w-6 h-6 animate-bounce" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS STRIP ================= -->
+    <section class="bg-pine-900 on-dark" aria-label="Clinic statistics">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div class="reveal">
+          <p class="font-instrument-serif text-white text-3xl md:text-4xl">18<span class="italic">+</span></p>
+          <p class="mt-1 text-white/60 text-xs md:text-sm font-light">Years of practice</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p class="font-instrument-serif text-white text-3xl md:text-4xl">12k<span class="italic">+</span></p>
+          <p class="mt-1 text-white/60 text-xs md:text-sm font-light">Smiles transformed</p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="font-instrument-serif text-white text-3xl md:text-4xl">4.9<span class="italic">/5</span></p>
+          <p class="mt-1 text-white/60 text-xs md:text-sm font-light">Average patient rating</p>
+        </div>
+        <div class="reveal reveal-delay-3">
+          <p class="font-instrument-serif text-white text-3xl md:text-4xl">24<span class="italic">/7</span></p>
+          <p class="mt-1 text-white/60 text-xs md:text-sm font-light">Emergency availability</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="reveal relative">
+          <img src="https://sspark.genspark.ai/cfimages?u1=Oj%2FBibbJIcKYHhi0rTG9hc3wVuHncfCXuka7M6RcF9taiTdlJV8ElhIo6jqDio%2FoMPuhmhf16g4cX50mdBq%2F6b256Uy9inedV4Pqd3hcu2htxJoNX9WNo9HJELIhqGfsznvDCLIG6u0LH1SICzEKyTm%2B&u2=jFENiVVnP%2FyzvzIG&width=2560"
+               alt="Bright, welcoming reception area of the Lumière Dental clinic" loading="lazy"
+               class="w-full h-72 sm:h-96 lg:h-[520px] object-cover rounded-3xl shadow-xl" />
+          <div class="hidden sm:block absolute -bottom-8 -right-4 lg:-right-8 w-44 lg:w-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-cream">
+            <img src="https://sspark.genspark.ai/cfimages?u1=couvM%2F4WYZDBrTI2SoXhMgEF%2BtSCW86gn9iog6zTsCVHh1oMovgIW6sjwDAi4w3p7XFJEVAtEMqVw9fBnCbt56wlEFIF%2FOgY2ceF7OZx3ZeInnRpgKEbVl5P%2FAK9InSmPHk%2FUA%2FDdM%2F7g5sowQSdoA%3D%3D&u2=HkfasCqFEF1DyRIp&width=1200"
+                 alt="Calming, spa-like treatment suite at Lumière Dental" loading="lazy"
+                 class="w-full h-32 lg:h-40 object-cover" />
+          </div>
+        </div>
+        <div>
+          <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">About the clinic</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+            A dental studio <span class="italic">designed</span> around how you feel
+          </h2>
+          <p class="reveal reveal-delay-2 mt-6 text-pine-900/70 font-light leading-relaxed">
+            Founded in 2008, Lumière Dental was built on a simple belief: exceptional dentistry should feel
+            less like a procedure and more like a retreat. Our Madison Avenue studio pairs museum-calm
+            interiors with the most advanced clinical technology in the city.
+          </p>
+          <p class="reveal reveal-delay-2 mt-4 text-pine-900/70 font-light leading-relaxed">
+            From digital 3D scanning that replaces uncomfortable impressions, to sedation options for anxious
+            patients, every detail is engineered for comfort — without ever compromising on precision.
+          </p>
+          <ul class="reveal reveal-delay-3 mt-8 grid sm:grid-cols-2 gap-4">
+            <li class="flex items-start gap-3">
+              <i data-lucide="scan-face" class="w-5 h-5 text-pine-600 mt-0.5 shrink-0" aria-hidden="true"></i>
+              <span class="text-sm font-light">Digital 3D smile design &amp; impression-free scanning</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="heart-pulse" class="w-5 h-5 text-pine-600 mt-0.5 shrink-0" aria-hidden="true"></i>
+              <span class="text-sm font-light">Sedation &amp; anxiety-free dentistry programs</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="leaf" class="w-5 h-5 text-pine-600 mt-0.5 shrink-0" aria-hidden="true"></i>
+              <span class="text-sm font-light">Biocompatible, metal-free materials</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="badge-check" class="w-5 h-5 text-pine-600 mt-0.5 shrink-0" aria-hidden="true"></i>
+              <span class="text-sm font-light">Board-certified specialists in every discipline</span>
+            </li>
+          </ul>
+          <a href="#dentists" class="reveal reveal-delay-4 group mt-10 inline-flex items-center gap-2 bg-pine-800 text-white rounded-full px-7 py-3 text-sm font-medium btn-primary-dark">
+            Meet the Team
+            <i data-lucide="arrow-right" class="btn-arrow w-4 h-4" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="max-w-2xl">
+          <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Dental services</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+            Complete care, <span class="italic">from</span> checkup <span class="italic">to</span> full smile design
+          </h2>
+        </div>
+
+        <div class="mt-12 md:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <article class="service-card reveal bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="stethoscope" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">General Checkups</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">Thorough exams, gentle hygiene and early-detection screening with intraoral cameras.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-1 bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="sparkles" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Teeth Whitening</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">In-studio laser whitening up to 8 shades brighter in a single relaxing visit.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-2 bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="gem" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Dental Implants</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">Guided implant surgery with lifelike ceramic restorations, built to last decades.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-3 bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="smile" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Invisalign &amp; Braces</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">Discreet clear aligners and modern orthodontics, mapped digitally from day one.</p>
+          </article>
+          <article class="service-card reveal bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="activity" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Root Canal Therapy</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">Microscope-assisted, single-visit endodontics — comfortable and truly pain-free.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-1 bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="star" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Cosmetic Veneers</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">Hand-layered porcelain veneers designed to complement your unique features.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-2 bg-cream border border-stone-200 rounded-3xl p-7">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pine-800 text-white"><i data-lucide="baby" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Pediatric Dentistry</h3>
+            <p class="mt-2 text-sm font-light text-pine-900/65 leading-relaxed">Playful, patient first visits that help little ones fall in love with dental care.</p>
+          </article>
+          <article class="service-card reveal reveal-delay-3 bg-pine-800 border border-pine-800 rounded-3xl p-7 on-dark">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-pine-800"><i data-lucide="siren" class="w-5 h-5" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-instrument-serif text-2xl text-white">Emergency Care</h3>
+            <p class="mt-2 text-sm font-light text-white/70 leading-relaxed">Same-day relief for toothaches, chips and trauma — 24/7 on-call dentist.</p>
+            <a href="#emergency" class="mt-4 inline-flex items-center gap-2 text-sm text-white underline underline-offset-4 decoration-white/40 hover:decoration-white">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DENTISTS ================= -->
+    <section id="dentists" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div class="max-w-xl">
+            <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Meet the dentists</p>
+            <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+              Specialists <span class="italic">who</span> treat you like family
+            </h2>
+          </div>
+          <p class="reveal reveal-delay-2 text-sm font-light text-pine-900/60 max-w-sm leading-relaxed">
+            Every clinician at Lumière is board-certified, fluent in nervous-patient care and obsessive about detail.
+          </p>
+        </div>
+
+        <div class="mt-12 md:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="dentist-card reveal group">
+            <div class="rounded-3xl overflow-hidden bg-stone-200">
+              <img src="https://sspark.genspark.ai/cfimages?u1=q0P7k6ByzNnkFS5xchxglZf4yI46V2MyWp1YJKSajRs49liTeumQ5A%2FeMto7kn8kDfaEoARvc9CtBjLhzqEy0%2FEIOswi8EXwvPqGr4dPRNiVkXLW7DAnaEDxXBYmrNWD0h8dzyokCZIazFwEtFzb4%2BI5L0j4LLMR1MHb17wDr6SkknLHdMhSstqtF4WSG%2BY%2BW75Xdgd9f0dI4Bv3to7SPvpbYkY4APR1pBHZSWidwP%2F8tkY%3D&u2=TLrTST8MEhWDHCom&width=1200"
+                   alt="Portrait of Dr. Amelia Hart, cosmetic and restorative dentist" loading="lazy"
+                   class="w-full h-80 object-cover object-top" />
+            </div>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Dr. Amelia Hart</h3>
+            <p class="text-sm font-light text-pine-600">Cosmetic &amp; Restorative Dentistry</p>
+            <p class="mt-2 text-sm font-light text-pine-900/60 leading-relaxed">NYU College of Dentistry · 15 years crafting natural-looking veneers and full-mouth restorations.</p>
+          </article>
+          <article class="dentist-card reveal reveal-delay-1 group">
+            <div class="rounded-3xl overflow-hidden bg-stone-200">
+              <img src="https://sspark.genspark.ai/cfimages?u1=J5R0SiESFMVRdnAbqqW84BbD%2F5%2FWGjHl64J0iK2CNQNgHzwQ9DXq%2F5edlFSXlCT7MIl7GgO5BzTqzGcG6IMwlS3OIJuHkXHJ4rD0tA%2F1TEVN%2B7rSLvJ%2BorsnLUq9AkLljtdJTzq%2B34EoiTF%2FhiAa84xtol1HTF6Eu1h26%2F3lNctuBZuhSRmvjBbUQ6fxmanad4gedrT5iBWS2gmnyb%2B9smUCjaI8Cc4F8o6CZ%2F9N9wE%2FZP0%3D&u2=8K9ZZkffM4WWGsD5&width=1200"
+                   alt="Portrait of Dr. Daniel Reyes, implant surgeon" loading="lazy"
+                   class="w-full h-80 object-cover object-top" />
+            </div>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Dr. Daniel Reyes</h3>
+            <p class="text-sm font-light text-pine-600">Implantology &amp; Oral Surgery</p>
+            <p class="mt-2 text-sm font-light text-pine-900/60 leading-relaxed">Columbia-trained surgeon with 3,000+ guided implant placements and full-arch cases.</p>
+          </article>
+          <article class="dentist-card reveal reveal-delay-2 group">
+            <div class="rounded-3xl overflow-hidden bg-stone-200">
+              <img src="https://sspark.genspark.ai/cfimages?u1=afOZqat1VMDe5NIs3UIqGxzD4UvIrJyI8Wwhyn7%2FdjNT74ZyQrF4EXn%2Fc9VXOzKUOEALcrP1DIjxH4OLk5Wij%2BwW%2BzSqo%2FPRtXk87q1iGjkwypQB7u%2FhWfpACUbhL3f9xSiOaLXkeOHvnA%3D%3D&u2=4UVWYH%2FazjBbuiXt&width=1200"
+                   alt="Portrait of Dr. Sofia Lindqvist, pediatric dentist" loading="lazy"
+                   class="w-full h-80 object-cover object-top" />
+            </div>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Dr. Sofia Lindqvist</h3>
+            <p class="text-sm font-light text-pine-600">Pediatric Dentistry</p>
+            <p class="mt-2 text-sm font-light text-pine-900/60 leading-relaxed">Beloved by our youngest patients — specialist in gentle, fear-free first dental experiences.</p>
+          </article>
+          <article class="dentist-card reveal reveal-delay-3 group">
+            <div class="rounded-3xl overflow-hidden bg-stone-200">
+              <img src="https://sspark.genspark.ai/cfimages?u1=1YKORDnikgnLOu4tD9AnA%2BOw5MWlxfdn8tS44Y435L7Reeyg6SuUurPJZ1Mg6sohuY%2FullJoiF1eFz4L3I172QMTnaOA3uUI61qhRCQr7QkgxVfXdHDt9fulZTV%2BkFu%2FvqdSskafGk4LYE5EkTo%3D&u2=rpGirOIANClHFGpG&width=1200"
+                   alt="Portrait of Dr. Priya Nair, orthodontist" loading="lazy"
+                   class="w-full h-80 object-cover object-top" />
+            </div>
+            <h3 class="mt-5 font-instrument-serif text-2xl">Dr. Priya Nair</h3>
+            <p class="text-sm font-light text-pine-600">Orthodontics &amp; Invisalign</p>
+            <p class="mt-2 text-sm font-light text-pine-900/60 leading-relaxed">Diamond-tier Invisalign provider aligning over 1,200 smiles with digital treatment planning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BEFORE & AFTER GALLERY ================= -->
+    <section id="gallery" class="py-20 md:py-28 bg-pine-900 on-dark">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="max-w-2xl">
+          <p class="reveal section-eyebrow text-white/50 text-xs font-medium uppercase">Before &amp; after</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg text-white">
+            Real patients, <span class="italic">real</span> transformations
+          </h2>
+          <p class="reveal reveal-delay-2 mt-5 text-white/60 text-sm md:text-base font-light leading-relaxed">
+            A selection of recent results from our whitening, veneer and implant programs. Photos shared with each patient's kind permission.
+          </p>
+        </div>
+
+        <div class="mt-12 md:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <figure class="gallery-card reveal relative rounded-3xl overflow-hidden group">
+            <img src="https://sspark.genspark.ai/cfimages?u1=vD4oNsU0RuA2jRRp6Tq1BGJUPLWyPIkIaYowrgSV1FotosI6AQL2dcr4X9kSXIfm9TVdWZLaVKUhPEFcoZ8NHFX5Q%2B4NEwDjLvmpMRA80ls%3D&u2=Mr44k5yB7Ex3y2TH&width=1600"
+                 alt="Patient smiling after receiving porcelain veneers" loading="lazy" class="w-full h-64 object-cover" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+              <span class="text-[0.65rem] uppercase tracking-widest text-white/60">Case 01 · Before → After</span>
+              <p class="text-white font-instrument-serif text-xl">Porcelain Veneers</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-delay-1 relative rounded-3xl overflow-hidden group">
+            <img src="https://sspark.genspark.ai/cfimages?u1=i8jEtnjcIKrvyxA%2FBp4%2FPKoAjae0mmKkkb9OKYLuVmrUKAo3ovU2byyTzK9rKKWpHJykU2ZqbSmRxeZUBgANuO4quICWgi5hGJWYC59kQNBPzxWUTdfVvnj45NIt2sam1jhse9Ak&u2=dy19HL5nZP%2FsIwXZ&width=1600"
+                 alt="Brightened smile after professional teeth whitening" loading="lazy" class="w-full h-64 object-cover" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+              <span class="text-[0.65rem] uppercase tracking-widest text-white/60">Case 02 · Before → After</span>
+              <p class="text-white font-instrument-serif text-xl">Laser Whitening</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-delay-2 relative rounded-3xl overflow-hidden group">
+            <img src="https://sspark.genspark.ai/cfimages?u1=hHf80kvpu66OvwsMVH9A408y4PXm58wVtmcRp69ME50nK58%2FoWZu8tN1wsjwCDhX099nEm5z6LFxQVAGbHEHgNM8y7U%2FRCcAxI0T5q57kYTRtJ5fVUActOEg%2FprswEprao5ua3wA1vuRU1qnoL4j6qs%2Bj6Ttmzttrk%2FwLSO6Ak%2FaTd1tsWtw9HTlNL18pA%3D%3D&u2=OPJKpxS1duY5HCM2&width=1600"
+                 alt="Natural-looking dental implant restoration result" loading="lazy" class="w-full h-64 object-cover" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+              <span class="text-[0.65rem] uppercase tracking-widest text-white/60">Case 03 · Before → After</span>
+              <p class="text-white font-instrument-serif text-xl">Implant Restoration</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal relative rounded-3xl overflow-hidden group">
+            <img src="https://sspark.genspark.ai/cfimages?u1=aUooS4Ug%2B0XjebrV9sCmxTEUn3NaUg6dlqIFC59a%2BI8sJ5row2SSXJMmuD0%2B4vMJoJ97KPa0W4T9kxsWrqWYX4uaDxO6mgXM5DdS7Aw00Wg4YpnNgIoyDU3Bfq9QvrVJdg%3D%3D&u2=wkHwj4PBrwlBVmfd&width=1600"
+                 alt="Cosmetic smile makeover result" loading="lazy" class="w-full h-64 object-cover" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+              <span class="text-[0.65rem] uppercase tracking-widest text-white/60">Case 04 · Before → After</span>
+              <p class="text-white font-instrument-serif text-xl">Smile Makeover</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-delay-1 relative rounded-3xl overflow-hidden group">
+            <img src="https://sspark.genspark.ai/cfimages?u1=my4Z443cqy5uRVSJALatSFkk38IgFPl7sctnwIt8S%2FKENGP0ikEE%2BnlrlzA3iVOjooFvIbxiRZ1tsvuLeOJbwXU%2BwK1vuNqMcRjGd7HFrQgPXZ5nMnOzTzyBDcKY7EI5%2F8wp8sWpWqXQt1Bh&u2=LI%2B%2FsAzmNA0%2BtXVg&width=1600"
+                 alt="Close-up of porcelain veneer smile result" loading="lazy" class="w-full h-64 object-cover" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+              <span class="text-[0.65rem] uppercase tracking-widest text-white/60">Case 05 · Before → After</span>
+              <p class="text-white font-instrument-serif text-xl">Veneer Refinement</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal reveal-delay-2 relative rounded-3xl overflow-hidden group">
+            <img src="https://sspark.genspark.ai/cfimages?u1=wXZAwj5a32q17OVWdydWl%2FQksQL5sk635749HjfPVCJ%2Fnz%2Fo11HjlzJ1NIbaJKlhiYJDk2de1u04CEpfoA3ECx7dm9RyYr8UUr9bHg50jwb%2FQafM1WOt%2B%2FyiXtcMSS3%2BmnUNdqXBt93dPIEGypc%3D&u2=YeD7OTrXygS4OEI1&width=1600"
+                 alt="Happy patients showing confident smiles after treatment" loading="lazy" class="w-full h-64 object-cover" />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+              <span class="text-[0.65rem] uppercase tracking-widest text-white/60">Case 06 · Before → After</span>
+              <p class="text-white font-instrument-serif text-xl">Invisalign Journey</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section id="why-us" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Why choose us</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+            Dentistry <span class="italic">without</span> the dread
+          </h2>
+          <div class="mt-8 space-y-6">
+            <div class="reveal reveal-delay-1 flex gap-4">
+              <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="armchair" class="w-5 h-5" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-medium">Spa-level comfort</h3>
+                <p class="mt-1 text-sm font-light text-pine-900/60 leading-relaxed">Noise-cancelling headphones, weighted blankets, warm towels and ceiling entertainment in every suite.</p>
+              </div>
+            </div>
+            <div class="reveal reveal-delay-2 flex gap-4">
+              <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="microscope" class="w-5 h-5" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-medium">Technology that removes guesswork</h3>
+                <p class="mt-1 text-sm font-light text-pine-900/60 leading-relaxed">3D CBCT imaging, AI-assisted diagnostics and same-day ceramic milling for fewer visits.</p>
+              </div>
+            </div>
+            <div class="reveal reveal-delay-3 flex gap-4">
+              <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="hand-coins" class="w-5 h-5" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-medium">Transparent, honest pricing</h3>
+                <p class="mt-1 text-sm font-light text-pine-900/60 leading-relaxed">Written estimates before any treatment, flexible monthly plans and most insurances accepted.</p>
+              </div>
+            </div>
+            <div class="reveal reveal-delay-4 flex gap-4">
+              <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="clock" class="w-5 h-5" aria-hidden="true"></i></span>
+              <div>
+                <h3 class="font-medium">On time, every time</h3>
+                <p class="mt-1 text-sm font-light text-pine-900/60 leading-relaxed">We reserve buffer time between patients so you're never kept waiting past your appointment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal order-1 lg:order-2">
+          <img src="https://sspark.genspark.ai/cfimages?u1=z56VDYxsoFQ5uqHya0JGwkJujd%2FEEAd5ypEEGCYLRZxTM%2FBCocdT%2Bfz8IKQQqPylABISvGVfM6xjbnO1UKCxVElQVU7Gd0ZdacJ7bwW8yDnlTZN8mGlwmGQ9BOlsckUfIoymi5oOt0WStndjKawQfgxePN89M0%2FRzppenQctGNDr6Bw%3D&u2=RaG2s4HNM7Nxp0Ko&width=2560"
+               alt="Relaxed patient reclining comfortably in a modern dental suite" loading="lazy"
+               class="w-full h-72 sm:h-96 lg:h-[540px] object-cover rounded-3xl shadow-xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="testimonials" class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+        <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Patient stories</p>
+        <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+          Loved <span class="italic">by</span> the smiles we serve
+        </h2>
+
+        <div class="reveal reveal-delay-2 mt-12 overflow-hidden" aria-label="Patient testimonials carousel">
+          <div id="testimonial-track">
+            <blockquote class="testimonial-slide px-2 sm:px-8">
+              <div class="flex justify-center gap-1 text-amber-500" aria-label="5 out of 5 stars">
+                <i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i>
+              </div>
+              <p class="mt-6 font-instrument-serif text-xl sm:text-2xl md:text-3xl leading-snug">"I've avoided dentists for a decade out of fear. Dr. Hart's team treated me with such patience that I actually look forward to my visits now. My veneers look completely natural."</p>
+              <footer class="mt-6 text-sm font-light text-pine-900/60">Rebecca M. — Veneers &amp; Whitening</footer>
+            </blockquote>
+            <blockquote class="testimonial-slide px-2 sm:px-8">
+              <div class="flex justify-center gap-1 text-amber-500" aria-label="5 out of 5 stars">
+                <i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i>
+              </div>
+              <p class="mt-6 font-instrument-serif text-xl sm:text-2xl md:text-3xl leading-snug">"Cracked a molar on a Friday night — Dr. Reyes saw me within two hours and saved the tooth. The 24/7 emergency line is no marketing gimmick. Forever grateful."</p>
+              <footer class="mt-6 text-sm font-light text-pine-900/60">James T. — Emergency Root Canal</footer>
+            </blockquote>
+            <blockquote class="testimonial-slide px-2 sm:px-8">
+              <div class="flex justify-center gap-1 text-amber-500" aria-label="5 out of 5 stars">
+                <i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i>
+              </div>
+              <p class="mt-6 font-instrument-serif text-xl sm:text-2xl md:text-3xl leading-snug">"My six-year-old asks when she can go back to 'the tooth spa.' Dr. Lindqvist turned what I dreaded into the easiest appointment of our month."</p>
+              <footer class="mt-6 text-sm font-light text-pine-900/60">Priya &amp; Anya S. — Pediatric Care</footer>
+            </blockquote>
+            <blockquote class="testimonial-slide px-2 sm:px-8">
+              <div class="flex justify-center gap-1 text-amber-500" aria-label="5 out of 5 stars">
+                <i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i><i data-lucide="star" class="w-4 h-4 fill-current" aria-hidden="true"></i>
+              </div>
+              <p class="mt-6 font-instrument-serif text-xl sm:text-2xl md:text-3xl leading-snug">"Fourteen months of Invisalign with Dr. Nair and my wedding photos are everything I hoped for. Clear pricing, zero surprises, beautiful results."</p>
+              <footer class="mt-6 text-sm font-light text-pine-900/60">Daniel K. — Invisalign</footer>
+            </blockquote>
+          </div>
+
+          <div class="mt-10 flex items-center justify-center gap-6">
+            <button id="testimonial-prev" class="h-11 w-11 rounded-full border border-stone-300 flex items-center justify-center hover:bg-pine-800 hover:text-white hover:border-pine-800 transition-colors" aria-label="Previous testimonial">
+              <i data-lucide="arrow-left" class="w-4 h-4" aria-hidden="true"></i>
+            </button>
+            <div id="testimonial-dots" class="flex items-center gap-2" role="tablist" aria-label="Testimonial navigation"></div>
+            <button id="testimonial-next" class="h-11 w-11 rounded-full border border-stone-300 flex items-center justify-center hover:bg-pine-800 hover:text-white hover:border-pine-800 transition-colors" aria-label="Next testimonial">
+              <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EMERGENCY ================= -->
+    <section id="emergency" class="relative overflow-hidden on-dark">
+      <img src="https://sspark.genspark.ai/cfimages?u1=cK5GMl2j9frA0zFpxONap6ZASwf3hkkbSJ%2BDmv5ojvZr8GDp86mCF6b3YHVaQTBzKJOJawqm1flMnZyyv8B70CmILrT%2FaA%2BaEcDcM9jeyqLcEAoG1S7NHPbinC5M5eATaNbqWg%3D%3D&u2=h%2F8Z2XDSYmGcsQsX&width=2560"
+           alt="" aria-hidden="true" loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-pine-900/90" aria-hidden="true"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-24 flex flex-col lg:flex-row lg:items-center gap-10">
+        <div class="flex-1">
+          <p class="reveal inline-flex items-center gap-2 text-red-300 text-xs font-medium uppercase section-eyebrow">
+            <i data-lucide="siren" class="w-4 h-4" aria-hidden="true"></i>
+            Emergency dental care
+          </p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg text-white">
+            In pain <span class="italic">right</span> now? We'll see you <span class="italic">today.</span>
+          </h2>
+          <p class="reveal reveal-delay-2 mt-5 text-white/70 font-light leading-relaxed max-w-xl">
+            Severe toothache, knocked-out tooth, broken crown or swelling — call our 24/7 line and a dentist
+            will guide you immediately. Same-day emergency slots are reserved every single day.
+          </p>
+          <ul class="reveal reveal-delay-3 mt-6 flex flex-wrap gap-x-8 gap-y-3 text-sm font-light text-white/80">
+            <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-300" aria-hidden="true"></i> Same-day appointments</li>
+            <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-300" aria-hidden="true"></i> Immediate pain relief</li>
+            <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-300" aria-hidden="true"></i> Weekend &amp; night on-call</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-2 shrink-0 flex flex-col sm:flex-row lg:flex-col gap-4">
+          <a href="tel:+12125550148" class="group inline-flex items-center justify-center gap-3 bg-white text-black rounded-full px-8 py-4 text-sm font-medium hover:bg-stone-200 transition-colors">
+            <i data-lucide="phone-call" class="w-4 h-4" aria-hidden="true"></i>
+            Call Now — (212) 555-0148
+          </a>
+          <a href="https://wa.me/12125550148" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 border border-white/40 text-white rounded-full px-8 py-4 text-sm font-light hover:bg-white/10 hover:border-white/60 transition-all">
+            <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INSURANCE ================= -->
+    <section id="insurance" class="py-16 md:py-20 bg-white border-b border-stone-200" aria-label="Insurance plans accepted">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Insurance accepted</p>
+        <h2 class="reveal reveal-delay-1 mt-3 font-instrument-serif display-md">We work <span class="italic">with</span> your plan</h2>
+        <p class="reveal reveal-delay-2 mt-3 text-sm font-light text-pine-900/60 max-w-lg mx-auto">In-network with most major PPO plans. Our team verifies your benefits before your first visit — at no charge.</p>
+      </div>
+      <div class="mt-10 overflow-hidden" aria-hidden="true">
+        <div class="marquee-track gap-4 px-2">
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Delta Dental</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Cigna</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>MetLife</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Aetna</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Guardian</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Humana</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>United Healthcare</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Delta Dental</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Cigna</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>MetLife</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Aetna</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Guardian</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>Humana</span>
+          <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-stone-200 bg-cream px-6 py-3 text-sm font-light text-pine-900/70"><i data-lucide="shield-check" class="w-4 h-4 text-pine-600"></i>United Healthcare</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <section id="book" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-5 gap-10 lg:gap-14">
+        <div class="lg:col-span-2">
+          <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Appointment booking</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+            Reserve your <span class="italic">visit</span> in under a minute
+          </h2>
+          <p class="reveal reveal-delay-2 mt-5 text-pine-900/70 font-light leading-relaxed">
+            Choose a time that suits you and our care coordinator will confirm by phone or email within one
+            business hour. New patients receive a complimentary smile consultation.
+          </p>
+
+          <div class="reveal reveal-delay-3 mt-8 bg-white border border-stone-200 rounded-3xl p-6">
+            <h3 class="font-instrument-serif text-2xl inline-flex items-center gap-2">
+              <i data-lucide="clock" class="w-5 h-5 text-pine-600" aria-hidden="true"></i>
+              Clinic Hours
+            </h3>
+            <dl class="mt-4 space-y-2.5 text-sm font-light">
+              <div class="flex justify-between gap-4"><dt class="text-pine-900/60">Monday — Friday</dt><dd class="font-medium">8:00 AM — 7:00 PM</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-pine-900/60">Saturday</dt><dd class="font-medium">9:00 AM — 3:00 PM</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-pine-900/60">Sunday</dt><dd class="font-medium">Emergencies only</dd></div>
+            </dl>
+            <p class="mt-4 text-xs font-light text-pine-900/50 leading-relaxed">Out-of-hours emergencies are always answered on our 24/7 line: <a href="tel:+12125550148" class="underline underline-offset-2">(212) 555-0148</a></p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3">
+          <form id="booking-form" class="reveal reveal-delay-2 bg-white border border-stone-200 rounded-3xl p-6 sm:p-8 shadow-sm" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="book-name" class="block text-sm font-medium mb-1.5">Full name <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="book-name" name="full_name" class="form-input" placeholder="Jane Cooper" autocomplete="name" required />
+                <p id="book-name-error" class="field-error" role="alert"></p>
+              </div>
+              <div>
+                <label for="book-email" class="block text-sm font-medium mb-1.5">Email <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="email" id="book-email" name="email" class="form-input" placeholder="jane@email.com" autocomplete="email" required />
+                <p id="book-email-error" class="field-error" role="alert"></p>
+              </div>
+              <div>
+                <label for="book-phone" class="block text-sm font-medium mb-1.5">Phone <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="tel" id="book-phone" name="phone" class="form-input" placeholder="(212) 555-0000" autocomplete="tel" required />
+                <p id="book-phone-error" class="field-error" role="alert"></p>
+              </div>
+              <div>
+                <label for="book-service" class="block text-sm font-medium mb-1.5">Service <span class="text-red-600" aria-hidden="true">*</span></label>
+                <select id="book-service" name="service" class="form-input" required>
+                  <option value="">Select a service…</option>
+                  <option>General Checkup</option>
+                  <option>Teeth Whitening</option>
+                  <option>Dental Implants</option>
+                  <option>Invisalign &amp; Braces</option>
+                  <option>Root Canal Therapy</option>
+                  <option>Cosmetic Veneers</option>
+                  <option>Pediatric Dentistry</option>
+                  <option>Emergency Care</option>
+                </select>
+                <p id="book-service-error" class="field-error" role="alert"></p>
+              </div>
+              <div>
+                <label for="book-date" class="block text-sm font-medium mb-1.5">Preferred date <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="date" id="book-date" name="preferred_date" class="form-input" required />
+                <p id="book-date-error" class="field-error" role="alert"></p>
+              </div>
+              <div>
+                <label for="book-time" class="block text-sm font-medium mb-1.5">Preferred time <span class="text-red-600" aria-hidden="true">*</span></label>
+                <select id="book-time" name="preferred_time" class="form-input" required>
+                  <option value="">Select a time slot…</option>
+                  <option>Morning (8:00 — 11:00)</option>
+                  <option>Midday (11:00 — 14:00)</option>
+                  <option>Afternoon (14:00 — 17:00)</option>
+                  <option>Evening (17:00 — 19:00)</option>
+                </select>
+                <p id="book-time-error" class="field-error" role="alert"></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="book-message" class="block text-sm font-medium mb-1.5">Anything we should know? <span class="text-pine-900/40 font-light">(optional)</span></label>
+                <textarea id="book-message" name="message" rows="4" class="form-input resize-none" placeholder="Tell us about your concern, dental anxiety, insurance plan…"></textarea>
+                <p id="book-message-error" class="field-error" role="alert"></p>
+              </div>
+            </div>
+
+            <div id="booking-success" class="hidden mt-6 rounded-2xl bg-emerald-50 border border-emerald-200 p-4 flex items-start gap-3" role="status">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" aria-hidden="true"></i>
+              <p class="text-sm text-emerald-800 font-light"><span class="font-medium">Request received!</span> Our care coordinator will confirm your appointment within one business hour.</p>
+            </div>
+            <div id="booking-error" class="hidden mt-6 rounded-2xl bg-red-50 border border-red-200 p-4 flex items-start gap-3" role="alert">
+              <i data-lucide="alert-circle" class="w-5 h-5 text-red-600 mt-0.5 shrink-0" aria-hidden="true"></i>
+              <p class="text-sm text-red-800 font-light">Something went wrong sending your request. Please try again, or call us at <a href="tel:+12125550148" class="underline">(212) 555-0148</a>.</p>
+            </div>
+
+            <button type="submit" id="booking-submit" class="group mt-7 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-pine-800 text-white rounded-full px-8 py-3.5 text-sm font-medium btn-primary-dark disabled:opacity-60 disabled:cursor-not-allowed">
+              <span>Request Appointment</span>
+              <i data-lucide="arrow-right" class="btn-arrow w-4 h-4" aria-hidden="true"></i>
+            </button>
+            <p class="mt-4 text-xs font-light text-pine-900/50">By submitting you agree to be contacted about your appointment. We never share your details.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="py-20 md:py-28 bg-white">
+      <div class="max-w-3xl mx-auto px-6 md:px-12">
+        <div class="text-center">
+          <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">FAQs</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+            Questions, <span class="italic">answered</span>
+          </h2>
+        </div>
+
+        <div class="mt-12 space-y-3">
+          <div class="faq-item reveal bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5" aria-expanded="false">
+              <span class="font-medium text-sm sm:text-base">Do you accept new patients and walk-ins?</span>
+              <i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-pine-600" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="px-6 pb-5 text-sm font-light text-pine-900/65 leading-relaxed">Yes — new patients are always welcome and most can be seen within 48 hours. Walk-ins are accommodated whenever a same-day slot is free, and genuine emergencies are always prioritized the same day.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5" aria-expanded="false">
+              <span class="font-medium text-sm sm:text-base">I'm anxious about dental visits. How do you help?</span>
+              <i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-pine-600" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="px-6 pb-5 text-sm font-light text-pine-900/65 leading-relaxed">Roughly a third of our patients come to us specifically because of dental anxiety. We offer unhurried appointments, noise-cancelling headphones, nitrous oxide and oral sedation options, and a strict "raise your hand, we stop" promise.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5" aria-expanded="false">
+              <span class="font-medium text-sm sm:text-base">Which insurance plans do you accept?</span>
+              <i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-pine-600" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="px-6 pb-5 text-sm font-light text-pine-900/65 leading-relaxed">We're in-network with Delta Dental, Cigna, MetLife, Aetna, Guardian, Humana and United Healthcare PPO plans, and we can process most other PPOs out-of-network. Send us your details before your visit and we'll verify your benefits for free.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5" aria-expanded="false">
+              <span class="font-medium text-sm sm:text-base">How much do veneers or implants cost?</span>
+              <i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-pine-600" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="px-6 pb-5 text-sm font-light text-pine-900/65 leading-relaxed">Porcelain veneers start at $1,450 per tooth and single implants (including the crown) from $3,900. Every treatment begins with a written, itemized estimate, and monthly payment plans from 0% APR are available for qualifying patients.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5" aria-expanded="false">
+              <span class="font-medium text-sm sm:text-base">What should I do in a dental emergency?</span>
+              <i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-pine-600" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="px-6 pb-5 text-sm font-light text-pine-900/65 leading-relaxed">Call (212) 555-0148 immediately — a dentist answers 24/7. For a knocked-out tooth, hold it by the crown (not the root), rinse gently, and keep it in milk or inside your cheek. Getting to us within 60 minutes gives the best chance of saving it.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal bg-cream border border-stone-200 rounded-2xl overflow-hidden">
+            <button class="faq-question w-full flex items-center justify-between gap-4 text-left px-6 py-5" aria-expanded="false">
+              <span class="font-medium text-sm sm:text-base">How often should I really get a checkup?</span>
+              <i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-pine-600" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p class="px-6 pb-5 text-sm font-light text-pine-900/65 leading-relaxed">For most healthy adults, every six months. Patients with gum disease, diabetes, or orthodontic appliances may benefit from 3–4 month intervals. We'll recommend a schedule honestly based on your exam — never on a sales quota.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="max-w-2xl">
+          <p class="reveal section-eyebrow text-pine-600 text-xs font-medium uppercase">Contact</p>
+          <h2 class="reveal reveal-delay-1 mt-4 font-instrument-serif display-lg">
+            Find us <span class="italic">on</span> Madison Avenue
+          </h2>
+        </div>
+
+        <div class="mt-12 grid lg:grid-cols-2 gap-8 items-stretch">
+          <div class="reveal grid sm:grid-cols-2 gap-5">
+            <div class="bg-white border border-stone-200 rounded-3xl p-6">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="map-pin" class="w-5 h-5" aria-hidden="true"></i></span>
+              <h3 class="mt-4 font-medium">Address</h3>
+              <p class="mt-1.5 text-sm font-light text-pine-900/60 leading-relaxed">128 Madison Avenue, Suite 402<br />New York, NY 10016</p>
+            </div>
+            <div class="bg-white border border-stone-200 rounded-3xl p-6">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="phone" class="w-5 h-5" aria-hidden="true"></i></span>
+              <h3 class="mt-4 font-medium">Phone</h3>
+              <p class="mt-1.5 text-sm font-light text-pine-900/60 leading-relaxed">
+                <a href="tel:+12125550148" class="hover:text-pine-700 transition-colors">(212) 555-0148</a><br />24/7 emergency line
+              </p>
+            </div>
+            <div class="bg-white border border-stone-200 rounded-3xl p-6">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i></span>
+              <h3 class="mt-4 font-medium">Email</h3>
+              <p class="mt-1.5 text-sm font-light text-pine-900/60 leading-relaxed">
+                <a href="mailto:care@lumieredental.com" class="hover:text-pine-700 transition-colors break-all">care@lumieredental.com</a><br />Replies within one business hour
+              </p>
+            </div>
+            <div class="bg-white border border-stone-200 rounded-3xl p-6">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-pine-50 text-pine-700"><i data-lucide="train-front" class="w-5 h-5" aria-hidden="true"></i></span>
+              <h3 class="mt-4 font-medium">Getting here</h3>
+              <p class="mt-1.5 text-sm font-light text-pine-900/60 leading-relaxed">2 min from 33rd St (6 train)<br />Validated parking next door</p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2 rounded-3xl overflow-hidden border border-stone-200 shadow-sm min-h-[320px]">
+            <iframe class="map-frame" title="Map showing the location of Lumière Dental at 128 Madison Avenue, New York" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                    src="https://www.google.com/maps?q=128%20Madison%20Avenue%2C%20New%20York%2C%20NY%2010016&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-pine-900 on-dark" aria-label="Site footer">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <p class="text-white font-semibold text-lg tracking-tight inline-flex items-center gap-2">
+            <i data-lucide="sparkle" class="w-4 h-4 text-white/70" aria-hidden="true"></i>
+            Lumière Dental
+          </p>
+          <p class="mt-4 text-sm font-light text-white/60 leading-relaxed">Modern, gentle dentistry for radiant smiles — in the heart of New York since 2008.</p>
+          <div class="mt-5 flex items-center gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Lumière Dental on Instagram" class="h-9 w-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Lumière Dental on Facebook" class="h-9 w-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Lumière Dental on YouTube" class="h-9 w-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://wa.me/12125550148" target="_blank" rel="noopener" aria-label="Chat with Lumière Dental on WhatsApp" class="h-9 w-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Footer quick links">
+          <h3 class="text-white text-sm font-medium uppercase tracking-widest">Explore</h3>
+          <ul class="mt-4 space-y-2.5 text-sm font-light">
+            <li><a href="#about" class="text-white/60 hover:text-white transition-colors">About the Clinic</a></li>
+            <li><a href="#dentists" class="text-white/60 hover:text-white transition-colors">Meet the Dentists</a></li>
+            <li><a href="#gallery" class="text-white/60 hover:text-white transition-colors">Before &amp; After</a></li>
+            <li><a href="#testimonials" class="text-white/60 hover:text-white transition-colors">Patient Stories</a></li>
+            <li><a href="#faq" class="text-white/60 hover:text-white transition-colors">FAQs</a></li>
+            <li><a href="#book" class="text-white/60 hover:text-white transition-colors">Book Appointment</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Footer services">
+          <h3 class="text-white text-sm font-medium uppercase tracking-widest">Services</h3>
+          <ul class="mt-4 space-y-2.5 text-sm font-light">
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors">General Checkups</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors">Teeth Whitening</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors">Dental Implants</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors">Invisalign &amp; Braces</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors">Cosmetic Veneers</a></li>
+            <li><a href="#emergency" class="text-white/60 hover:text-white transition-colors">Emergency Care</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="text-white text-sm font-medium uppercase tracking-widest">Smile tips, monthly</h3>
+          <p class="mt-4 text-sm font-light text-white/60 leading-relaxed">One short email a month — practical oral-health advice, no spam.</p>
+          <form id="newsletter-form" class="mt-4" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <div class="flex rounded-full bg-white/10 border border-white/20 p-1 focus-within:border-white/50 transition-colors">
+              <input type="email" id="newsletter-email" placeholder="you@email.com" required
+                     class="flex-1 min-w-0 bg-transparent px-4 py-2 text-sm text-white placeholder-white/40 focus:outline-none" />
+              <button type="submit" class="shrink-0 bg-white text-black text-sm font-medium rounded-full px-5 py-2 hover:bg-stone-200 transition-colors">Join</button>
+            </div>
+            <p id="newsletter-msg" class="mt-3 text-xs" role="status"></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-7 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs font-light text-white/50">© <span id="current-year">2026</span> Lumière Dental. All rights reserved.</p>
+        <p class="text-xs font-light text-white/50">128 Madison Avenue, Suite 402, New York, NY 10016 · <a href="tel:+12125550148" class="hover:text-white transition-colors">(212) 555-0148</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING BUTTONS ================= -->
+  <a href="https://wa.me/12125550148" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+     class="floating-btn fixed bottom-5 right-5 z-40 h-14 w-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl shadow-black/20">
+    <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
+  <a href="tel:+12125550148" aria-label="Call Lumière Dental now"
+     class="floating-btn fixed bottom-5 left-5 z-40 h-14 w-14 rounded-full bg-pine-800 text-white flex items-center justify-center shadow-xl shadow-black/20 md:hidden">
+    <i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>
+  </a>
+  <button id="back-to-top" aria-label="Back to top"
+          class="floating-btn fixed bottom-[5.5rem] right-5 z-40 h-11 w-11 rounded-full bg-white text-pine-900 border border-stone-200 flex items-center justify-center shadow-lg">
+    <i data-lucide="arrow-up" class="w-4 h-4" aria-hidden="true"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
