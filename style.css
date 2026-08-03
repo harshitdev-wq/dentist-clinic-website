@@ -1,0 +1,419 @@
+/* ============================================================
+   Lumière Dental — Global Styles
+   Design language: Instrument Serif + Inter, premium minimal
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f7f5f0;
+  color: #14231f;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #0b3b36;
+  color: #f7f5f0;
+}
+
+/* Visible focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0b3b36;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.on-dark a:focus-visible,
+.on-dark button:focus-visible {
+  outline-color: #f7f5f0;
+}
+
+/* ---------- Fluid typography helpers ---------- */
+.display-xl {
+  font-size: clamp(2rem, 6.5vw, 4.75rem);
+  line-height: 1.1;
+}
+
+.display-lg {
+  font-size: clamp(1.85rem, 4.2vw, 3.25rem);
+  line-height: 1.12;
+}
+
+.display-md {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.15;
+}
+
+/* ---------- Navbar ---------- */
+#site-header {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+}
+
+#site-header.scrolled {
+  background-color: rgba(8, 27, 24, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  color: #ffffff;
+}
+
+/* ---------- Hamburger (Atelier spec) ---------- */
+.hamburger-line {
+  display: block;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 9999px;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.hamburger-line.line-top,
+.hamburger-line.line-bottom {
+  width: 1.5rem; /* w-6 */
+}
+
+.hamburger-line.line-middle {
+  width: 1rem; /* w-4 */
+  margin: 5px 0;
+}
+
+.hamburger.open .line-top {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open .line-middle {
+  opacity: 0;
+}
+
+.hamburger.open .line-bottom {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Mobile menu overlay ---------- */
+#mobile-menu {
+  pointer-events: none;
+}
+
+#mobile-menu .menu-backdrop {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#mobile-menu .menu-content {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#mobile-menu.open {
+  pointer-events: auto;
+}
+
+#mobile-menu.open .menu-backdrop,
+#mobile-menu.open .menu-content {
+  opacity: 1;
+}
+
+#mobile-menu .menu-item {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.7s cubic-bezier(0.76, 0, 0.24, 1),
+    transform 0.7s cubic-bezier(0.76, 0, 0.24, 1),
+    padding-left 0.3s ease;
+}
+
+#mobile-menu.open .menu-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#mobile-menu .menu-item:hover {
+  padding-left: 1rem;
+}
+
+#mobile-menu .menu-cta {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.55s,
+    transform 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.55s;
+}
+
+#mobile-menu.open .menu-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal,
+  .reveal.revealed,
+  #mobile-menu .menu-item,
+  .hamburger-line {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ---------- Hero entrance ---------- */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-anim {
+  opacity: 0;
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-anim-1 { animation-delay: 0.15s; }
+.hero-anim-2 { animation-delay: 0.35s; }
+.hero-anim-3 { animation-delay: 0.55s; }
+.hero-anim-4 { animation-delay: 0.75s; }
+
+/* ---------- Cards ---------- */
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -16px rgba(11, 59, 54, 0.18);
+  border-color: rgba(11, 59, 54, 0.25);
+}
+
+.dentist-card img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dentist-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-card img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 400px;
+}
+
+.faq-item .faq-icon {
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* ---------- Testimonials slider ---------- */
+#testimonial-track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.testimonial-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.testimonial-dot {
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-dot.active {
+  width: 1.75rem;
+  background-color: #0b3b36;
+}
+
+/* ---------- Forms ---------- */
+.form-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2ded4;
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #14231f;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: #9aa39e;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0b3b36;
+  box-shadow: 0 0 0 3px rgba(11, 59, 54, 0.12);
+}
+
+.form-input.input-error {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+.field-error {
+  display: none;
+  color: #b03a2e;
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.field-error.visible {
+  display: block;
+}
+
+/* ---------- Floating buttons ---------- */
+.floating-btn {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, opacity 0.4s ease;
+}
+
+.floating-btn:hover {
+  transform: translateY(-4px);
+}
+
+#back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary-dark {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary-dark:hover {
+  background-color: #0e4a44;
+  box-shadow: 0 12px 28px -10px rgba(11, 59, 54, 0.5);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.group:hover .btn-arrow,
+a:hover .btn-arrow,
+button:hover .btn-arrow {
+  transform: translateX(2px);
+}
+
+/* ---------- Marquee for insurance strip ---------- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* ---------- Misc ---------- */
+.section-eyebrow {
+  letter-spacing: 0.22em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.map-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+  display: block;
+  filter: grayscale(0.25) contrast(1.02);
+}
